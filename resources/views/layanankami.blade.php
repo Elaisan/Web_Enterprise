@@ -1,23 +1,39 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title', 'Inaklug - Homepage.png')</title>
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+    .hero-section {
+        position: relative;
+        width: 100%;
+        height: 300px;
+        background-image: 
+            linear-gradient(to right, rgba(75, 0, 110, 0.8), rgba(75, 0, 110, 0.2)),
+            url('{{ asset('gambar/gatescambride.png') }}');
+        background-size: 150%; 
+        background-position: center 55%;
+        background-repeat: no-repeat;
+        display: flex;
+        padding-top: 12rem;
+        padding-left: 2.7rem;
+        align-items: center;
+        justify-content: center;
+    }
+    .hero-section h1 {
+        color: white;
+        font-weight: 560;
+        font-size: 26px;
+    }
     
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
-    @include('partials.navbar')
-    @include('layanan')
-    @include('hubungi')
-    @include('partials.footer')
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+    .hsh {
+        margin-top: 300px;
+    }
+</style>
+<div class="hero-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-9 hsh">
+                    <h1>LAYANAN KAMI</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@include('layanan')
+@include('hubungi')

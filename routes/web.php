@@ -7,9 +7,17 @@ Route::get('/', function () {
 });
 
 Route::get('tentangkami', function () {
-    return view('tentangkami');
+    return view('home');
 });
 
 Route::get('layanankami', function () {
-    return view('layanankami');
+    return view('home');
+});
+
+Route::get('artikel', function () {
+    return view('home');
+});
+
+Route::get('hubungikami', function () {
+    return view('home');
 });

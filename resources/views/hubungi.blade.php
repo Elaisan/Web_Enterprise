@@ -50,6 +50,7 @@
     .btn-section,
     .btn-section5-2 {
         text-decoration: none;
+        white-space: nowrap;
         border-radius: 50px;
         padding: 12px 25px;
         
@@ -93,54 +94,38 @@
         /* Opsional: Tambahkan sedikit bayangan */
         box-shadow: 0 4px 10px rgba(59, 121, 227, 0.4);
     }
-/* --- Responsivitas Khusus Mobile untuk Bagian Hubungi Kami --- */
-/* --- Perbaikan Hubungi Kami: Tombol Kanan-Kiri Rapat di Mobile (<576px) --- */
-/* --- Perbaikan Hubungi Kami: Tombol Kanan-Kiri Rapat di Mobile (<576px) --- */
-@media (max-width: 576px) { 
-    
-    /* 1. MENGAMBIL KONTROL DARI ROW DAN MENGHILANGKAN MARGIN GUTTER */
-    .contact-section .row {
-        /* Hapus margin horizontal bawaan row (Gutter luar) */
-        margin-left: -5px !important; 
-        margin-right: -5px !important;
-        /* Pastikan row dipusatkan di layar */
-        justify-content: center !important; 
-    }
-    
-    /* 2. MENYESUAIKAN KOLOM DAN MENGHILANGKAN PADDING GUTTER */
-    /* Target kolom yang memiliki col-sm-6 (tombol Anda) */
-    .contact-section .row > .col-sm-6 {
-        /* Hapus padding horizontal bawaan kolom (Gutter dalam) */
-        padding-left: 5px !important;
-        padding-right: 5px !important;
-        
-        /* Set jarak vertikal yang rapi */
-        margin-bottom: 1rem !important; 
-        
-        /* Memastikan kolom di tengah di dalam row yang sudah di-center */
-        margin-left: auto !important; 
-        margin-right: auto !important; 
-    }
 
-    /* 3. Penyesuaian Tombol agar Sesuai Lebar Kolom */
-    .btn-contact-action {
-        /* Di mobile, tombol harus mengisi lebar kolom 50% yang sudah dipersempit */
-        width: 100% !important; 
-        max-width: none !important; /* Hapus batasan max-width 225px */
-        
-        /* Hapus margin auto/tetap karena tombol sudah width: 100% */
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-        
-        /* Kurangi padding internal sedikit di mobile */
-        padding: 0.6rem 1.2rem !important; 
+    @media (max-width: 576px) { 
+        .contact-section .row {
+            /* Hapus margin horizontal bawaan row (Gutter luar) */
+            margin-left: -5px !important; 
+            margin-right: -5px !important;
+            /* Pastikan row dipusatkan di layar */
+            justify-content: center !important; 
+        }
+
+        .contact-section .row > .col-sm-6 {
+            flex-basis: 50% !important;
+            flex-grow: 0 !important;
+            padding-left: 0px !important;
+            padding-right: 0px !important;
+            margin-bottom: 1rem !important; 
+            margin-left: auto !important; 
+            margin-right: auto !important; 
+        }
+
+        .btn-contact-action {
+            width: 100% !important; 
+            max-width: none !important;
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+            padding: 0.6rem 1.2rem !important; 
+        }
+
+        .contact-section .row > .col-sm-6:nth-child(2n) {
+            margin-bottom: 0 !important;
+        }
     }
-    
-    /* 4. Hapus margin-bottom dari kolom terakhir */
-    .contact-section .row > .col-sm-6:nth-child(2n) {
-        margin-bottom: 0 !important;
-    }
-}
 </style>
 <section class="contact-section py-5">
         <div class="container">
